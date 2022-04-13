@@ -1,5 +1,6 @@
-// import logo from './logo.svg';
+import logo from './logo.svg';
 import './App.css';
+import UsingState from './usingState';
 
 function App() {
   return (
@@ -18,7 +19,14 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <h2>JavaScript ReactJS Basic</h2>
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <h3>JavaScript ReactJS Basic</h3>
+      </header>
+
+      
+      <UsingState />
+
     </div>
   );
 }

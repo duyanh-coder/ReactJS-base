@@ -1,30 +1,20 @@
 import React from 'react';
 import { useState } from 'react';
 
-// const orders = [100, 200, 300]
+const orders = [100, 200, 300]
 
 export default function () {
 
-//     // use callback init State
-//     const [counter, setCounter] = useState(() => {
-//         const total = orders.reduce((total, current) => total + current)
-//         return total
-//     })
+    // use callback init State
+    const [counter, setCounter] = useState(() => {
+        const total = orders.reduce((total, current) => total + current)
+        return total
+    })
 
-//     // use callback setState
-//     const handleIncrease = () => {
-//         setCounter(prevCounter => prevCounter +1)
-//     }
-
-//   return (
-//     <div style={{ padding: 20 }} >
-//         <h3>Counter using useState()</h3>
-
-//         <h1>{counter}</h1>
-//         <button onClick={handleIncrease} >Increase</button>
-
-//     </div>
-//   )
+    // use callback setState
+    const handleIncrease = () => {
+        setCounter(prevCounter => prevCounter +1)
+    }
 
 //==============================================================
 
@@ -42,13 +32,23 @@ export default function () {
         })
     }
     return (
-        <div style={{ padding: 20 }} >
-            <h3>Change State</h3>
+        <>
+            <div style={{ padding: 20 }} >
+                <h3>Counter using useState()</h3>
 
-            <h1>{JSON.stringify(info)}</h1>
-            <button onClick={handleChange} >Update</button>
+                <h1>{counter}</h1>
+                <button onClick={handleIncrease} >Increase</button>
 
-        </div>
+            </div>
+
+            <div style={{ padding: 20 }} >
+                <h3>Change State</h3>
+
+                <p>{JSON.stringify(info)}</p>
+                <button onClick={handleChange} >Update</button>
+
+            </div>
+        </>
     )
 
 }
